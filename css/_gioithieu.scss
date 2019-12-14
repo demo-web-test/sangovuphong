@@ -1,0 +1,24 @@
+﻿$color: #CF2D2D;
+$font-fam: 'Roboto', sans-serif;
+/*Giới thiệu*/
+.about-us{
+    background: #fff;
+    padding: 30px 20px 10px;
+    border-radius: 4px;
+    .about-title{
+        font-family: $font-fam;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    .post-content{
+        font-family: $font-fam;
+        img{
+            max-width: 100% !important;
+        }
+        iframe{
+            max-width: 100% !important;
+        }
+    }
+}

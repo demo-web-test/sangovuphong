@@ -1,0 +1,233 @@
+﻿$color: #CF2D2D;
+$font-fam: 'Roboto', sans-serif;
+
+/*cart*/
+.content.cart{
+    .list{
+        background: #fff;
+        &:nth-child(2){
+            margin-top: 20px;
+        }
+        .list-body{
+            padding: 20px 20px 20px 20px;
+            .text{
+                font-size: 15px;
+                color: #666;
+                font-family: $font-fam;
+            }
+            .action-cart{
+                width: 100%;
+                margin-bottom: 20px;
+                height: 42px;
+                .redirect-btn{
+                    float: left;
+                    padding: 9px 10px;
+                    border: 1px solid $color;
+                    border-radius: 5px;
+                    color: $color;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    &:hover{
+                        background: $color;
+                        color: #fff;
+                    }
+                }
+                .pay-btn{
+                    float: right;
+                    padding: 9px 60px;
+                    border: 1px solid #d0181c;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    background: #d0181c;
+                    font-weight: bold;
+                    &:hover{
+                         background: #FF3338;
+                         border: 1px solid #ff3338;
+                    }
+                }
+            }
+            .form-info{
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        list-style: none;
+                        width: 50%;
+                        margin: 5px 0;
+                        input{
+                            width: 100%;
+                            border: 1px solid #dcedf9;
+                            border-radius: 5px;
+                            padding: 9px 10px;
+                            font-size: 15px;
+                            color: #333;
+                            outline: none;
+                            font-family: $font-fam;
+                        }
+                        &:nth-of-type(odd){
+                            padding-right: 5px;
+                        }
+                        &:nth-of-type(even){
+                            padding-left: 5px;
+                        }
+                        &.input-are{
+                            width: 100%;
+                            padding: 0;
+                             textarea{
+                                width: 100%;
+                                border: 1px solid #dcedf9;
+                                border-radius: 5px;
+                                padding: 9px 10px;
+                                font-size: 15px;
+                                color: #333;
+                                height: 105px;
+                                outline: none;
+                                font-family: $font-fam;
+                            }
+                        }
+                    }
+                }
+            }
+            .box-cart{
+                .total-price{
+                    float: right;
+                    font-size: 15px;
+                    font-family: $font-fam;
+                    font-weight: bold;
+                    color: #333;
+                    text-transform: uppercase;
+                    .all-price{
+                        color: #cf1717;
+                        font-size: 18px;
+                    }
+                }
+                .table{
+                    border-collapse:separate; 
+                    border-spacing: 0 15px;
+                    thead{
+                       th{
+                            border: none;
+                            padding: 0 10px;
+                            &:first-child{
+                                padding: 0;
+                            }
+                       }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                border: none;
+                                border-top: 1px solid #d2d2d2;
+                                border-bottom: 1px solid #d2d2d2;
+                                padding: 10px;
+                                vertical-align:middle;
+                                &.img{
+                                    padding: 0;
+                                }
+                                img{
+                                    height: 125px;
+                                    object-fit: cover;
+                                    width: 140px;
+                                    border-left: 1px solid #d2d2d2;
+                                    border-right: 1px solid #d2d2d2;
+                                }
+                                &.title{
+                                    font-size: 15px;
+                                    font-family: $font-fam;
+                                    font-weight: bold;
+                                    color: #333;
+                                    max-width: 250px;
+                                    span{
+                                       height: 84px;
+                                       overflow: hidden;
+                                       display: flex;
+                                       align-items: center;
+                                   }
+                                }
+                                .del-btn{
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 4px;
+                                    color: #333;
+                                    display: inline-block;
+                                    background: #ebebeb;
+                                    line-height: 32px;
+                                    text-align: center;
+                                    float: right;
+                                    &:hover{
+                                        background: #AAAAAA;
+                                    }
+                                }
+                                .box-num{
+                                    height: 40px;
+                                    line-height: 40px;
+                                    display: flex;
+                                    .lbtn{
+                                        display: inline-block;
+                                        width: 40px;
+                                        height: 40px;
+                                        text-align: center;
+                                        color: #333;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        border: 1px solid #DBE6EE;
+                                        &:hover{
+                                            background: #e8e8e8;
+                                        }
+                                        &.down{
+                                            border-right: none;
+                                            border-top-left-radius: 5px;
+                                            border-bottom-left-radius: 5px;
+                                        }
+                                        &.up{
+                                            border-left: none;
+                                            border-top-right-radius: 5px;
+                                            border-bottom-right-radius: 5px;
+                                        }
+                                    }
+                                    input{
+                                        width: 40px;
+                                        height: 40px;
+                                        text-align: center;
+                                        color: #333;
+                                        outline: none;
+                                        padding: 0;
+                                        border: 1px solid #DBE6EE;
+                                    }
+                                }
+                                .item-price{
+                                    font-family: $font-fam;
+                                    .price{
+                                        color: #cf1717;
+                                        font-size: 17px;
+                                        font-weight: bold;
+                                        font-family: $font-fam;
+                                        margin-bottom: 0;
+                                        margin-right: 10px;
+                                        display: inline-block;
+                                    }
+                                    .price-line-through{
+                                        font-size: 13px;
+                                        color: #999;
+                                        display: inline-block;
+                                        text-decoration:line-through;
+                                    }
+                                    .gift{
+                                        color: #333;
+                                        margin-bottom: 5px;
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

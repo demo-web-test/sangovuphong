@@ -1,0 +1,78 @@
+﻿@mixin pseudo($display: block, $pos: absolute, $content: '') { content: $content; display: $display; position: $pos; }
+@mixin transform($value) {-ms-transform: $value;-webkit-transform: $value;transform: $value}
+@mixin transition($value: .25s) {-webkit-transition: all $value ease;transition: all $value ease;}
+
+$color:#CF2D2D;//Màu chính
+$color-light:#999;
+
+.post{
+   &-entry { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; border-bottom: solid 1px #eee; margin-bottom: 10px; padding: 5px 0;
+    .right { display: flex; flex-wrap: wrap; 
+      .fb-like { margin-left: 6px }
+      .fb_iframe_widget { display: flex }
+      .social { display: flex; align-items: center; margin-top: -.5px }
+    }
+  }
+   &-date { font-size: 14px; color: $color-light; line-height: 1 }
+   &-size { margin-right: 4px; display: flex; align-items: center;
+    .normal { margin-right: 8px; color: $color-light; font-size: 13px }
+    .small, .large { width: 21px; height: 21px; display: inline-block; font-size: 12px; margin-right: 3px;
+      i { width: 100%; height: 100%; line-height: 22px; text-align: center; color: $color-light; background: #e8e8e8; border-radius: 3px }
+    }
+  }
+   &-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-top: solid 1px #eee; border-bottom: solid 1px #eee; padding: 9px 0;border-bottom:1px solid #eee;position:relative;
+    &:after{@include pseudo;width:100%;bottom:0;border-bottom:1px solid #fff}
+		.tool-left { display: flex;
+			& > a { text-decoration: none; display: inline-block; margin-right: 18px; color: $color-light; font-size: 13px; position: relative; line-height: 1;
+				&:hover { color: $color }
+				&:before { font-size: 12px; font-family: FontAwesome; line-height: 1; padding-right: 8px }
+				&.prev-page:before { content: '\f053' }
+				&.email:before { content: '\f0e0' }
+				&.print:before { content: '\f02f' }
+				& > span { display: none }
+				&:last-child { margin-right: 0}
+			}
+		}
+		.tool-right { display: flex; align-items: center;
+			.social { display: flex;
+				.fb-like { margin-left: 6px}
+				.fb_iframe_widget { display: flex }
+			}
+      .at-share-tbx-element .at-share-btn{margin-right:0;margin-left:5px}
+			.shareSocial { display: flex; align-items: center; height: 100%; margin:{ left: 8px; bottom: -4px};
+				.shareItem { height: 16px; color: $color-light;
+					& > a { padding: 0 4px }
+				}
+			}
+		}
+	}
+}
+@media (max-width: 600px) {
+	.post-entry { padding: 8px 0 }
+	.post-entry .post-date { width: 100%; margin-bottom: 8px }
+	.post-toolbar .tool-left { width: 100%; margin-bottom: 10px }
+	.post-toolbar .tool-right { margin-bottom: 2px }
+}
+@media (max-width: 320px) {
+	.post-toolbar .tool-left { justify-content: space-between; margin-bottom: 10px}
+}
+
+/*#region thanh điều hướng*/
+.SplitPages { display: flex; justify-content: center; flex-wrap: wrap; padding: 25px 0 20px 0; /*border-top: 1px solid #e7e7e7;*/position: relative; z-index: 1;
+	a { background-color: #fff; height: 35px; color: $color-light; display: inline-block; line-height: 35px; text-align: center; text-decoration: none; border: 1px solid #ddd; padding: 0 15px; margin: 2px; font-size: 14px; @include transition(0s);
+		&:hover { background: $color; color: #fff; border-color: $color; }
+		&.hientai { background: $color; color: #fff; border-color: $color; }
+		&.truoc, &.sau { width: 40px; padding: 0; position: relative; font-size: 0px;
+			&:before { position: absolute; z-index: 1; top: 50%; left: 50%; @include transform(translate(-50%, -50%)); font-family: FontAwesome; font-size: 13px; line-height: 1; }
+		}
+		&.truoc:before { content: '\f053'; }
+		&.sau:before { content: '\f054'; }
+		&.dau { padding-left: 27px; position: relative;
+			&:before { content: '\f053'; position: absolute; z-index: 1; font-family: FontAwesome; left: 15px; top: 13px; line-height: 1; font-size: 10px; }
+		}
+		&.cuoi { padding-right: 27px; position: relative;
+			&:after { content: '\f054'; position: absolute; z-index: 1; font-family: FontAwesome; right: 15px; top: 14px; line-height: 1; font-size: 10px; }
+		}
+	}
+}
+/*#endregion thanh điều hướng*/

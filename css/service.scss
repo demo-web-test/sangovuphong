@@ -1,0 +1,88 @@
+﻿$color: #CF2D2D;
+$font-fam: 'Roboto', sans-serif;
+
+.content.service{
+    .service-detail{background: #fff;
+    padding: 30px 20px 10px;
+    border-radius: 4px;}
+    .list{
+        font-family: $font-fam;
+        margin-top: 20px;
+        &:first-child{
+            margin-top: 0;
+        }
+        .list-body{
+            padding: 50px 20px 20px 20px;
+            background: #fff;
+            .item.item-row{
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0;
+                margin-bottom: 20px;
+                display: flex;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:hover{
+                    .item-img{
+                    }
+                    .item-body{
+                        .item-title{
+                            color: $color;
+                        }
+                    }
+                }
+                .item-img{
+                    padding: 0;
+                    margin: 0;
+                    width: 30%;
+                    overflow: hidden;
+                }
+                .item-body{
+                    padding: 10px 0 10px 15px;
+                    width: 70%;
+                    .item-title{
+                        display: block;
+                        color: #333;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 17px;
+                        margin-bottom:5px;
+                        height: 40px;
+                        overflow: hidden;
+                        &:hover{
+                            color: $color;
+                        }
+                    }
+                    .item-date-view{
+                        font-size: 14px;
+                        color: #999;
+                    }
+                    .item-text{
+                        margin-top: 10px;
+                        font-size: 15px;
+                        height: 66px;
+                        overflow: hidden;
+                        color: #666;
+                        
+                    }
+                    .item-links{
+                        margin-top: 10px;
+                        float: right;
+                        .item-link{
+                            color: $color;
+                            font-size: 15px;
+                            border: 1px solid $color;
+                            border-radius: 5px;
+                            padding: 5px 20px;
+                            &:hover{
+                                background: $color;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
